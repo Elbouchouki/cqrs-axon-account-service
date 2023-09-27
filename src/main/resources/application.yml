@@ -1,0 +1,14 @@
+server:
+  port: 4000
+
+spring:
+  application:
+    name: account-service
+  datasource:
+    url: jdbc:mysql://${MYSQL_HOST:localhost}:${MYSQL_PORT:3306}/${MYSQL_DATABASE:account_service_db}?createDatabaseIfNotExist=true&useSSL=false
+    username: ${MYSQL_USER:root}
+    password: ${MYSQL_PASSWORD:elbouchouki}
+  jpa:
+    hibernate:
+      ddl-auto: update
+
